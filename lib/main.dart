@@ -50,6 +50,11 @@ class MyHomePage extends StatelessWidget {
       ElevatedButton(
         onPressed: () => showToastMessage ("Hola Toasted Mundillo"),
         child: const Text("Muestra al Toasted Mundillo")
+      ),
+      const SizedBox(height: 16.0),
+      ElevatedButton(
+        onPressed: () => Fluttertoast.cancel(),
+        child: const Text("Cancel al Toasted Mundillo (IOS/WEB)")
       )
     ],),
   );
@@ -71,7 +76,11 @@ class MyHomePage extends StatelessWidget {
   void showToastMessage(String message) => Fluttertoast.showToast(
     msg: message,
     toastLength: Toast.LENGTH_SHORT,
-    gravity: ToastGravity.CENTER
+    gravity: ToastGravity.CENTER,
+    timeInSecForIosWeb: 20,
+    backgroundColor: Colors.green,
+    textColor: Colors.white,
+    fontSize: 20
   );
 }
 /*
