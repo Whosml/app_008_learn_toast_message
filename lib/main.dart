@@ -44,7 +44,12 @@ class MyHomePage extends StatelessWidget {
         ),
         title: const Text("Permitir usar Mic"),
         subtitle: const Text("Haga Click para Permitir"),
-        onTap: () {requestMicPermission();},
+        onTap: () => requestMicPermission(),
+      ),
+      const SizedBox(height: 32.0),
+      ElevatedButton(
+        onPressed: () => showToastMessage ("Hola Toasted Mundillo"),
+        child: const Text("Muestra al Toasted Mundillo")
       )
     ],),
   );
@@ -63,7 +68,11 @@ class MyHomePage extends StatelessWidget {
     }
   }
 
-  void showToastMessage(String message) => Fluttertoast.showToast(msg: message);
+  void showToastMessage(String message) => Fluttertoast.showToast(
+    msg: message,
+    toastLength: Toast.LENGTH_SHORT,
+    gravity: ToastGravity.CENTER
+  );
 }
 /*
 import 'dart:io';
