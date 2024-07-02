@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.6
   flutter_native_splash: ^2.4.0
   fluttertoast: ^8.2.6
+  permission_handler: ^11.3.1
+  baseflow_plugin_template: ^2.1.2
 
 dev_dependencies:
   flutter_test:
